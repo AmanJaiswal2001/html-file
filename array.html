@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            border: 5px groove violet;
+            padding: 10px;
+            border-radius: 4px;
+            width: 50%;
+            
+        }
+    </style>
+    <script>
+        var arr1=["red","green","voilet","yellow"]
+        var arr=["22.jpg","33.jpg","44.jpg","55.jpg","66.jpg"]
+     var i=0;
+        function slider(){
+     var h=   document.querySelector("img")
+    h.src="images/"+arr[i]
+    i++; 
+    if(i==arr.length)
+    i=0;  
+     
+}
+window.setInterval(slider,2000)
+    </script>
+</head>
+<body onmouse="slider()">
+    <center>
+    <h1>image changer</h1><hr/>
+    <img src="images\11.jpg">
+</center>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Dom get set</title>
+</head>
+<body>
+ 
+   First no: <br/> <input type="text" id="txt1"/><br/>
+   Second no:<br/> <input type="text" id="txt2"/><br/>
+  <p id="msg"></p>
+   <button onclick="add()">Add</button> 
+   <button onclick="sub()">sub</button>
+   <button onclick="mul()">mul</button>
+   <button onclick="div()">div</button> 
+   <script>
+    function add(){
+     var msg=document.getElementById("msg")  
+    var num1=document.getElementById("txt1").value
+var num2=document.getElementById("txt2").value
+var res=parseInt(num1)+parseInt(num2)
+//document.write(res);    
+//print in kisi bhe paragraf,div span etc tag//
+document.getElementById("msg").innerText="result is"+" "+ res
+//css used//
+document.getElementById("msg").style.color="red"
+msg.style.backgroundColor="yellow"
+}
+//> substract//
+function sub(){
+    var num1=document.getElementById("txt1").value
+    var num2=document.getElementById("txt2").value
+    var res=parseInt(num1)-parseInt(num2)
+    document.write(res);    
+    
+}
+function mul(){
+
+    var num1=document.getElementById("txt1").value
+    var num2=document.getElementById("txt2").value
+    var res=parseInt(num1)*parseInt(num2)
+    document.write(res);    
+    
+}
+function div(){
+    var num1=document.getElementById("txt1").value
+    var num2=document.getElementById("txt2").value
+    var res=parseFloat(num1)/parseFloat(num2)
+    document.write(res);    
+    
+}
+</script>
+</body>
+</html>

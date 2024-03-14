@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator</title>
+</head>
+<body>
+    <script>
+        //generator fun//
+function *generator(){
+    console.log("first generator");
+    yield   'pause the value whenever call other next method'
+    console.log("second generator");
+    yield   'pause the value whenever call other next method'
+    console.log("end")
+    yield 'third yield'
+}
+let g=generator();
+console.log(g.next());//prnt cl1
+console.log(g.next().value);//print value of yeild//
+g.next();//not print bcz does not use to console.log
+    </script>
+</body>
+</html>

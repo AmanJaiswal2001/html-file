@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let reg = /aman/g; //this is regular expression literals in js//
+      document.write(reg);
+      document.write(reg.source); //aman
+      //function to match expression//
+      let s = "this is a great code with aman to aman";
+      //exec()- this function will return an array for match or null for no match
+      //let result=reg.exec(s);
+      //console.log(result);
+      let resul = reg.exec(s);
+      console.log(resul);
+      // test()- return true or false//
+      let result = reg.test(s);
+      console.log(result);
+      //match-- it will be return an array of results or null
+ //   let result3=reg.match(s)--> this is a wrong//
+ let result3=s.match(reg)
+ console.log(result3);
+ //search()--return index of first match else -1//
+ let result5=s.search(reg);
+ console.log(result5);
+ //replace-- return new replaced string with all the replacement if no global flag only one string is replace//
+ let result6=s.replace(reg,'akanksha');
+ console.log(result6);
+    </script>
+  </body>
+</html>

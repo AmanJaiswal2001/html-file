@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+</head>
+<style>
+    
+    body{
+        background-color: rgb(6, 225, 249);
+        box-sizing: border-box;
+    }
+    h1{
+        color: red;
+        text-align: center;
+        font-size: 50px;
+    }
+    #box{
+        height: 300px;
+        width: 1000px;
+        color: rgb(248, 138, 5);
+       
+    }
+    .a{
+        height: 250px;
+        width: 250px;
+        float: left;
+        background: rgb(6, 244, 6);
+        margin: 25px;
+        text-align: center;
+        border:30px groove rgb(8, 246, 202);
+        box-sizing: border-box;
+        line-height: 190px;
+        font-size: 80px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+box-shadow: 0px 0px 10px 10px #f60112 inset;
+    }
+</style>
+<body onload="dclock()">
+    <h1>Digital Clock</h1>
+    <center>
+    <div id="box">
+        
+        <div id="h" class="a">HH</div>
+        <div id="m" class="a">MM</div>
+        <div id="s" class="a">SS</div>
+    </div>
+</center>
+    <script>
+        var dclock=()=>{
+        var d=new Date()
+       // alert(d.getDate()+"-"+(d.getMonth()+1)+"-"+d.getFullYear())
+        //document.write(`Date is:${d.getDate()}/${(d.getMonth()+1)}/${d.getFullYear()}`)
+       if(hh>12){
+        hh=hh-12+am;
+       }
+        var hh=document.querySelector("#h")
+        var mm=document.querySelector("#m")
+        var ss=document.querySelector("#s")
+        hh.innerText=d.getHours()
+        mm.innerText=d.getMinutes()
+        ss.innerText=d.getSeconds()
+        }
+        window.setInterval(dclock,1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="techpile" id="txt1">
+    <br>
+    <input type="text" value="tcs" id="txt2"><br/>
+    <button onclick="demo1()">start swap</button>
+    <script>
+        function demo(){
+            var t1=document.querySelector("#txt1")
+            var t2=document.querySelector("#txt2")
+            var v1=t1.value;
+            var v2=t2.value;
+            //set//
+           t1.value=v2;
+           t2.value=v1; 
+        }
+        let demo1=()=>{
+           // setInterval(demo,2000)
+            setTimeout(demo,2000)
+        }
+    </script>
+</body>
+</html>

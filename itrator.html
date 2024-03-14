@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      /*  let num=[10,20,30,50,40,45];
+        let iter=num[Symbol.iterator]();//function//given object and value//
+        console.log(iter.next());
+        console.log(iter.next().value);//given direct value//
+       console.log(iter.next().done);//check property
+       //print the all  value using loop//
+       let numb=[10,20,30,50,40,45];
+       let itera=numb[Symbol.iterator]();
+       let result=iter.next();
+       while(!result.done){
+        console.log(result.value)
+ result=iter.next();
+    }*/
+    //make a self iterator//
+    function numberiterator(arr){
+        var nextNum=0;
+        return{
+            next(){
+                if(nextNum < arr.length){
+                    return {
+                        value:arr[nextNum++],
+                        done:false
+                    }
+                 } else{
+                    return {
+                        done :true
+                    }
+                 }
+            }
+        }
+    }
+    let number=[100,200,300,400,500];
+    let num =numberiterator(number);
+    console.log(num.next().value);
+    num.next();
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+    </script>
+</body>
+</html>

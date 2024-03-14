@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">welcome to the javascript</p>
+    <p id="p2">welcome shop </p>
+    <input type="button" onclick="demo()" value="swap text">
+    <script>
+        function demo(){
+var h=document.getElementById("p1")
+var x=document.getElementById("p2")
+//get//
+var txt1=h.innerText;
+var txt2=x.innerText;
+//set//
+h.innerText=txt2;
+x.innerText=txt1;
+        }
+    </script>
+</body>
+</html>

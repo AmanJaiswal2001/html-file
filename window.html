@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- print the html tag/document  -->
+    <div id="box">
+        <h1>print the html tag </h1>
+        <p><b>Lorem ipsum dolor sit amet </b><mark>adipisicing elit. Itaque amet iste unde></mark> excepturi adipisci. Temporibus
+            porro quod consectetur praesentium. Tempore maiores nam incidunt nulla debitis asperiores quos earum enim
+            dolorem.</p>
+        <button onclick="demo()">print document</button>
+    </div>
+    <script>
+        demo = () => {
+            var x = document.querySelector("#box").innerHTML; document.body.innerHTML = x; window.print();
+        }
+    </script>
+</body>
+
+</html>

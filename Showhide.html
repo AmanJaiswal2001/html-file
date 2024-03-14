@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="Password" class="txt1" > <input type="button" value="show" onclick="demo1()" class="txt2">
+    <input type="radio" class="txt" > <input type="button" onclick="demo()" value="file upload">
+ 
+    <script>
+let demo=()=>
+{
+    var h=document.querySelector(".txt").type="file"
+
+}
+let demo1=()=>{
+    var x=document.querySelector(".txt2");
+    var b=x.value;
+    var y=document.querySelector(".txt1");
+    
+    if(b=="show"){
+        x.value="HIDE"
+        x.style.background="red";
+        x.style.color="white";
+        y.type="text";
+    }
+   
+    else{
+        x.value="show"
+        y.type="password
+        ";
+        x.style.background="green";
+        x.style.color="white";
+    }
+}
+    </script>
+
+</body>
+</html>

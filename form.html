@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 250px;
+            min-height: 200px;
+            border: linear-gradient(45deg, red, orange);
+            background-color: red;
+            margin: 100px auto;
+            border-radius: 5px;
+        }
+
+        #header {
+            min-height: 150px;
+            width: 200px;
+            background-color: antiquewhite;
+            text-align: center;
+            color: rgb(25, 123, 123);
+        }
+
+        #left {
+            height: 150px;
+            width: 200px;
+            float: left;
+            border: gold;
+            color: green;
+            background-color: gold;
+            flex: display;
+            flex-basis: auto;
+        }
+
+        #right {
+            height: 150px;
+            width: 200px;
+            float: right;
+            border: rgb(220, 173, 31);
+            color: green;
+            background-color: rgb(9, 231, 83);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div id="header">
+            <p></p>
+            <form>
+                <div id="left">login<br>
+                    Email_Id: <input type="text "  placeholder="Email_Id"><br>
+                    Password: <input type="Password" placeholder="Password"><br>
+           <input type="button" value="Login">
+                </form>
+
+        </div>
+        <div id="right">registration<br>
+            
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
